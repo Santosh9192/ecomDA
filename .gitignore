@@ -1,0 +1,79 @@
+# =============================================================================
+# E-Commerce Sales Analytics - .gitignore
+# =============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+.Python
+env/
+venv/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Data files (raw data is generated, not committed)
+data/raw/*.csv
+data/cleaned/*.csv
+data/database/*.db
+data/database/*.sqlite
+
+# Excel files
+excel/*.xlsx
+excel/reports/*.xlsx
+
+# Power BI
+powerbi/*.pbix
+
+# Reports
+reports/pdf/*
+reports/screenshots/*
+reports/*.csv
+reports/*.json
+reports/*.txt
+
+# Presentation
+presentation/*.pptx
+
+# Documentation binaries
+documentation/*.docx
+documentation/*.xlsx
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Database migrations
+alembic.ini
+migrations/
+
+# Temporary files
+tmp/
+temp/
+*.bak
+*.tmp
+# Windows reserved names
+nul
+CON
+PRN

@@ -1,0 +1,32 @@
+// ====================================================================
+// E-COMMERCE SALES ANALYTICS - COMPLETE DAX MEASURES
+// ====================================================================
+// Copy these into Power BI Desktop > Modeling > New Measure
+// ====================================================================
+
+// ---- SALES MEASURES ----
+Total Sales = SUM('orders_cleaned'[Sales])
+Total Profit = SUM('orders_cleaned'[Profit])
+Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)
+Total Quantity = SUM('orders_cleaned'[Quantity])
+Total Orders = DISTINCTCOUNT('orders_cleaned'[Order ID])
+Avg Order Value = DIVIDE([Total Sales], [Total Orders], 0)
+
+// ---- TIME INTELLIGENCE ----
+Sales YoY % = VAR CY = [Total Sales] VAR PY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('orders_cleaned'[Order Date])) RETURN DIVIDE(CY-PY, PY, 0)
+Sales MTD = TOTALMTD([Total Sales], 'orders_cleaned'[Order Date])
+Sales QTD = TOTALQTD([Total Sales], 'orders_cleaned'[Order Date])
+Sales YTD = TOTALYTD([Total Sales], 'orders_cleaned'[Order Date])
+
+// ---- CUSTOMER MEASURES ----
+Total Customers = DISTINCTCOUNT('orders_cleaned'[Customer ID])
+Avg Orders per Customer = DIVIDE([Total Orders], [Total Customers], 0)
+Customer LTV = DIVIDE([Total Sales], [Total Customers], 0)
+
+// ---- PRODUCT MEASURES ----
+Top Product = TOPN(1, VALUES('orders_cleaned'[Product Name]), [Total Sales])
+Return Rate = DIVIDE(CALCULATE(COUNTROWS('orders_cleaned'), 'orders_cleaned'[Is Returned] = 1), COUNTROWS('orders_cleaned'), 0)
+
+// ---- RANKING ----
+Product Rank = RANKX(ALL('orders_cleaned'[Product Name]), [Total Sales], , DESC)
+Category Rank = RANKX(ALL('orders_cleaned'[Category]), [Total Sales], , DESC)
