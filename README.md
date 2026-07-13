@@ -1237,7 +1237,7 @@ See the LICENSE file for more details.
 
 **LinkedIn**
 
-https://linkedin.com/in/YOUR-LINKEDIN
+www.linkedin.com/in/santosh-babar-839767407
 
 **GitHub**
 
@@ -1245,7 +1245,7 @@ https://github.com/Santosh9192
 
 **Email**
 
-YOUR_EMAIL@gmail.com
+santoshbabar919200@gmail.com
 
 ---
 
