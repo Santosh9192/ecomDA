@@ -8,16 +8,20 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15%2B-336791?logo=postgresql&logoColor=white)](https://postgresql.org)
 [![Power BI](https://img.shields.io/badge/Power_BI-Desktop-F2C811?logo=powerbi&logoColor=black)](https://powerbi.microsoft.com)
 [![Pandas](https://img.shields.io/badge/Pandas-2.0+-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org)
+[![Flask](https://img.shields.io/badge/Flask-3.0+-000000?logo=flask&logoColor=white)](https://flask.palletsprojects.com)
+[![Plotly](https://img.shields.io/badge/Plotly-5.0+-3F4F75?logo=plotly&logoColor=white)](https://plotly.com)
+[![Dash](https://img.shields.io/badge/Dash-2.0+-008DE4?logo=dash&logoColor=white)](https://dash.plotly.com)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ---
 
 **Transforming Raw E-Commerce Data into Actionable Business Insights**
 
-[📊 Dashboard Preview](#-power-bi-dashboard) •
+[📊 Dashboard Preview](#-interactive-dash-dashboard) •
 [📈 Features](#-key-features) •
 [🗄️ SQL Analytics](#%EF%B8%8F-sql-analytics) •
 [🐍 Python Pipeline](#-python-pipeline) •
+[🌐 Web Application](#-flask-web-application) •
 [📁 Project Structure](#-project-structure) •
 [🚀 Getting Started](#-getting-started)
 
@@ -27,15 +31,18 @@
 
 ## 📋 Project Overview
 
-A complete **Business Intelligence solution** for analyzing e-commerce sales data. This project demonstrates professional-level data analysis skills including **data cleaning, validation, SQL analytics, Python data processing, interactive dashboards, and automated reporting**.
+A complete **Business Intelligence solution** for analyzing e-commerce sales data. This project demonstrates professional-level data analysis skills including **data cleaning, validation, SQL analytics, Python data processing, interactive web dashboards, RESTful API endpoints, Power BI dashboards, and automated reporting**.
 
 > **What makes this project stand out:**
 > - Industry-standard folder structure (GitHub-ready)
-> - 15,000+ realistic transactional records
+> - 15,000+ realistic transactional records with 2,000 customers
 > - 50+ Business SQL queries with CTEs, Window Functions, Views & Stored Procedures
-> - Production-grade Python ETL pipeline with PEP8 compliance
-> - Professional Power BI dashboard with 8 analytical pages
-> - Comprehensive documentation (BRD, FS, Technical Docs, Data Dictionary)
+> - Production-grade Python ETL pipeline with shared utilities module
+> - **Interactive Plotly/Dash dashboard** with 6 tabs and 20+ visualizations
+> - **Flask web application** with RESTful API and embedded reports
+> - Professional Power BI template (`.pbit`) with 8 analytical pages and DAX measures
+> - Static HTML report with embedded interactive charts
+> - Comprehensive documentation (BRD, FS, Technical Docs, Data Dictionary, ERD)
 
 ## 🎯 Key Features
 
@@ -69,22 +76,40 @@ A complete **Business Intelligence solution** for analyzing e-commerce sales dat
 | Return Rate | Product quality indicator |
 
 ### 🐍 **Python Analytics Pipeline**
-- Modular ETL pipeline with 4 specialized scripts
+- Modular ETL pipeline with 7 specialized scripts
+- Shared utility module (`analytics_utils.py`) for DRY code across scripts
 - Automated chart generation (Matplotlib + Seaborn)
 - Statistical analysis and business insights extraction
 - Excel and CSV report generation with formatting
 
+### 🌐 **Flask Web Application**
+- Complete web interface with dark-themed UI
+- **6 REST API endpoints**: KPIs, sales overview, top products, categories, customers, regions, shipping
+- Embedded Plotly/Dash interactive dashboard
+- Static HTML report viewer with full-page charts
+- File download endpoints for generated reports
+- API documentation page with endpoint descriptions
+
+### 📊 **Interactive Dash Dashboard**
+- **6 Interactive Tabs**: Overview, Sales, Products, Customers, Regional, Forecasting
+- **20+ Visualizations**: Bar charts, pie/donut charts, heatmaps, scatter plots, maps, waterfall charts
+- **5 Real-time Filters**: Year, Category, Region, Customer Segment, Shipping Mode
+- **Interactive Data Tables**: Sortable, filterable, CSV export
+- **Dark Modern Theme**: Professional GitHub-inspired design
+
 ### 📊 **Power BI Dashboard**
 - **8 Interactive Pages**: Executive Summary, Sales, Profit, Customer, Regional, Product, Forecast, KPI
-- **20+ Visualizations**: Cards, bar charts, pie/donut charts, treemaps, maps, line charts, scatter plots
+- **49+ Visualizations**: Cards, bar charts, pie/donut charts, treemaps, maps, line charts, scatter plots, gauges
 - **Interactive Features**: Slicers, bookmarks, drill-through, tooltips, dynamic filters
 - **Dark Modern Theme**: Professional corporate design
+- **DAX Measures**: Comprehensive DAX formulas for time intelligence and KPIs
 
 ### 📋 **Automated Reporting**
 - **Monthly/Quarterly/Yearly** sales reports
 - **Customer, Product, Regional** analysis reports
 - **Excel** reports with pivot tables and conditional formatting
 - **CSV** exports for further analysis
+- **Static HTML** dashboard report with embedded Plotly charts
 
 ## 🛠️ Tech Stack
 
@@ -94,6 +119,8 @@ A complete **Business Intelligence solution** for analyzing e-commerce sales dat
 |----------|-------------|
 | **Languages** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-CC2927?style=flat&logo=postgresql&logoColor=white) |
 | **Data Processing** | ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white) |
+| **Interactive Dashboards** | ![Dash](https://img.shields.io/badge/Dash-008DE4?style=flat&logo=dash&logoColor=white) ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=flat&logo=plotly&logoColor=white) |
+| **Web Framework** | ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white) |
 | **Visualization** | ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black) ![Matplotlib](https://img.shields.io/badge/Matplotlib-3776AB?style=flat&logo=python&logoColor=white) ![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=flat&logo=python&logoColor=white) |
 | **Database** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white) |
 | **Reporting** | ![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white) |
@@ -107,51 +134,50 @@ A complete **Business Intelligence solution** for analyzing e-commerce sales dat
 Ecommerce-Sales-Analytics/
 │
 ├── 📂 data/
-│   ├── 📂 raw/              # Source CSV datasets
-│   │   ├── ecommerce_orders.csv    # 15,000 order records
-│   │   ├── customers.csv           # 2,000 customer records
-│   │   ├── regions.csv             # Regional reference data
-│   │   ├── categories.csv          # Category reference data
-│   │   └── generate_dataset.py     # Synthetic data generator
-│   ├── 📂 cleaned/          # Processed & cleaned datasets
-│   └── 📂 database/         # Database files
+│   └── 📂 raw/                  # Source CSV datasets
+│       ├── ecommerce_orders.csv      # 15,000 order records
+│       ├── customers.csv             # 2,000 customer records
+│       ├── regions.csv               # Regional reference data
+│       ├── categories.csv            # Category reference data
+│       └── generate_dataset.py       # Synthetic data generator
 │
 ├── 📂 sql/
-│   ├── schema.sql           # Complete database schema (11 tables)
-│   ├── insert.sql           # Data insertion & ETL scripts
-│   └── analysis_queries.sql # 50+ Business SQL queries
+│   ├── schema.sql               # Complete database schema (11 tables)
+│   ├── insert.sql               # Data insertion & ETL scripts
+│   └── analysis_queries.sql     # 50+ Business SQL queries
 │
 ├── 📂 python/
-│   ├── clean_data.py        # Data cleaning pipeline
-│   ├── validate_data.py     # Data validation engine
-│   ├── analysis.py          # Business analysis & charts
-│   └── export_reports.py    # Report generation module
+│   ├── analytics_utils.py       # Shared utilities (data loading, KPI calc, filters)
+│   ├── clean_data.py            # Data cleaning pipeline
+│   ├── validate_data.py         # Data validation engine (30+ checks)
+│   ├── analysis.py              # Business analysis & charts
+│   ├── export_reports.py        # Report generation module
+│   ├── dashboard.py             # Interactive Dash dashboard (6 tabs, 20+ charts)
+│   └── web_app.py               # Flask web app with REST API
 │
 ├── 📂 powerbi/
-│   └── Ecommerce Dashboard.pbix  # Power BI dashboard file
-│
-├── 📂 excel/
-│   └── Dashboard.xlsx       # Excel dashboard with pivot tables
+│   ├── Ecommerce_Dashboard.pbit # Power BI template file (8 pages)
+│   ├── DAX_Measures.txt         # Complete DAX formulas for KPIs
+│   └── generate_pbit.py         # Power BI template generator script
 │
 ├── 📂 reports/
-│   ├── 📂 pdf/              # PDF reports
-│   ├── 📂 screenshots/      # Dashboard screenshots & charts
-│   └── business_insights.csv # Extracted business insights
+│   └── dashboard_report.html    # Static HTML dashboard with embedded Plotly charts
 │
 ├── 📂 presentation/
-│   └── Project Presentation.pptx  # Project overview slides
+│   └── generate_presentation.py # Project presentation generator (.pptx)
 │
 ├── 📂 documentation/
-│   ├── Business_Requirements.md   # BRD document
-│   ├── Functional_Specification.md # FS document
-│   ├── Technical_Documentation.md  # Technical docs
-│   ├── ER_Diagram.md              # Entity Relationship Diagram
-│   └── Data_Dictionary.md         # Complete data dictionary
+│   ├── Business_Requirements.md       # BRD document
+│   ├── Functional_Specification.md    # FS document
+│   ├── Technical_Documentation.md     # Technical docs
+│   ├── ER_Diagram.md                  # Entity Relationship Diagram (text + PNG)
+│   ├── Data_Dictionary.md             # Complete data dictionary
+│   └── generate_erd.py               # ERD visualization generator
 │
-├── README.md               # Project overview (this file)
-├── requirements.txt        # Python dependencies
-├── .gitignore              # Git ignore rules
-└── LICENSE                 # MIT License
+├── README.md                  # Project overview (this file)
+├── requirements.txt           # Python dependencies
+├── .gitignore                 # Git ignore rules
+└── LICENSE                    # MIT License
 ```
 
 ## 🗄️ SQL Analytics (50+ Queries)
@@ -192,12 +218,15 @@ GROUP BY c.customer_id, c.customer_name, c.segment;
 
 ### Script Overview
 
-| Script | Description | Key Functions |
-|--------|-------------|---------------|
+| Script | Description | Key Features |
+|--------|-------------|--------------|
+| `analytics_utils.py` | Shared utilities module | Data loading (cached), KPI calculation, filter options, color palette, numpy serialization |
 | `clean_data.py` | Automated data cleaning | Missing values, duplicates, outliers, feature engineering |
-| `validate_data.py` | Data quality validation | Schema, types, ranges, domains, referential integrity |
-| `analysis.py` | Business analysis & charts | KPI calculation, 9 chart types, insight extraction |
+| `validate_data.py` | Data quality validation | Schema, types, ranges, domains, referential integrity, business rules |
+| `analysis.py` | Business analysis & charts | KPI calculation, 9 chart types (Matplotlib/Seaborn), insight extraction |
 | `export_reports.py` | Report generation | Excel, CSV, and text report exports |
+| `dashboard.py` | **Interactive Dash dashboard** | 6 tabs, 20+ Plotly visualizations, 5 real-time filters, static HTML report generator |
+| `web_app.py` | **Flask web application** | REST API (6 endpoints), embedded dashboards, report viewer, file downloads |
 
 ### Run the Pipeline
 
@@ -216,6 +245,83 @@ python python/analysis.py
 
 # Step 5: Export reports
 python python/export_reports.py
+
+# Step 6: Launch interactive Dash dashboard (http://localhost:8050)
+python python/dashboard.py
+
+# Step 7: Launch Flask web app (http://localhost:5000)
+python python/web_app.py
+```
+
+## 🌐 Flask Web Application
+
+The Flask web app (`web_app.py`) provides a complete web interface with navigation, embedded dashboards, and a RESTful API.
+
+### Web Pages
+
+| Route | Page | Description |
+|-------|------|-------------|
+| `/` | Home | Landing page with KPI overview and navigation cards |
+| `/dashboard` | Dashboard | Full-page static HTML report with embedded Plotly charts |
+| `/report` | Report | Standalone analytics report viewer |
+| `/dash` | Interactive | Embedded iframe of the Dash dashboard (requires `dashboard.py` running) |
+| `/api/docs` | API Docs | Interactive API documentation with code samples |
+
+### REST API Endpoints
+
+| Endpoint | Description | Parameters |
+|----------|-------------|------------|
+| `GET /api/kpis` | All business KPIs | `year`, `category`, `region`, `segment` |
+| `GET /api/sales/overview` | Monthly sales & profit | `year`, `category`, `region` |
+| `GET /api/products/top` | Top products by revenue | `limit` (default: 10) |
+| `GET /api/products/categories` | Category breakdown | — |
+| `GET /api/customers/top` | Top customers by spend | `limit` (default: 10) |
+| `GET /api/customers/segments` | Segment analysis | — |
+| `GET /api/regions` | Regional performance | — |
+| `GET /api/shipping` | Shipping mode analysis | — |
+| `GET /api/reports` | List available reports | — |
+
+### API Usage Example
+
+```bash
+# Get all KPIs
+curl http://localhost:5000/api/kpis
+
+# Get KPIs filtered by year and region
+curl "http://localhost:5000/api/kpis?year=2024&region=West"
+
+# Get top 5 products
+curl "http://localhost:5000/api/products/top?limit=5"
+```
+
+## 📊 Interactive Dash Dashboard
+
+The Plotly/Dash dashboard (`dashboard.py`) offers a rich interactive experience with 6 tabs and 20+ visualizations.
+
+### Dashboard Tabs
+
+| Tab | Visualizations | Key Insights |
+|-----|---------------|--------------|
+| **📊 Overview** | KPI Cards, Monthly Trend, Category Pie, Regional Bar, Seasonal Heatmap, Growth Rate, Profit Waterfall | High-level business health |
+| **💰 Sales** | Monthly Trend, Growth Rate, Discount Impact, Profit Margin Scatter, Seasonal Heatmap, Weekday Analysis, Payment Analysis, Shipping Analysis | Detailed sales performance |
+| **📦 Products** | Top 15 Products, Sub-Category Sales, Category Distribution, Profit Waterfall, Return Analysis, Margin Scatter | Product portfolio performance |
+| **👥 Customers** | Segment Analysis, Top Customers, Weekday Analysis, Delivery Analysis, Customer Data Table | Customer behavior analysis |
+| **🌍 Regional** | US Choropleth Map, Regional Bar Chart, Seasonal Heatmap, Shipping Analysis | Geographic performance |
+| **📈 Forecasting** | Sales with Moving Averages, Year-over-Year Comparison, Growth Rates, Monthly Growth, Yearly Summary Table | Sales trends & predictions |
+
+### Dashboard Features
+
+- **5 Real-time Filters** — Year, Category, Region, Segment, Shipping Mode
+- **Interactive Data Tables** — Sortable, filterable, downloadable as CSV
+- **Dark Modern Theme** — GitHub-inspired dark design
+- **Responsive Layout** — Adapts to all screen sizes
+- **Hover Tooltips** — Rich information on hover for all charts
+
+### Generate Static HTML Report
+
+```bash
+python python/dashboard.py
+# Generates: reports/dashboard_report.html (open in browser)
 ```
 
 ## 📊 Power BI Dashboard
@@ -234,12 +340,26 @@ python python/export_reports.py
 | **KPI Dashboard** | Gauges, Trend Indicators | Critical metric monitoring |
 
 ### Features
-- ✅ **Dark Modern Theme** - Professional corporate styling
-- ✅ **Interactive Slicers** - Filter by Date, Region, Category, Segment
-- ✅ **Drill-Through Navigation** - Click-through to detailed pages
-- ✅ **Custom Tooltips** - Rich hover information
-- ✅ **Bookmarks** - Saved view states
-- ✅ **Dynamic Measures** - DAX calculated columns and measures
+- ✅ **Dark Modern Theme** — Professional corporate styling
+- ✅ **Interactive Slicers** — Filter by Date, Region, Category, Segment
+- ✅ **Drill-Through Navigation** — Click-through to detailed pages
+- ✅ **Custom Tooltips** — Rich hover information
+- ✅ **Bookmarks** — Saved view states
+- ✅ **Dynamic Measures** — DAX calculated columns and measures
+
+### DAX Measures (Sample)
+
+```dax
+// Total Sales & Profit
+Total Sales = SUM('orders_cleaned'[Sales])
+Total Profit = SUM('orders_cleaned'[Profit])
+Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)
+
+// Time Intelligence
+Sales YoY % = VAR CY = [Total Sales]
+               VAR PY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('orders_cleaned'[Order Date]))
+               RETURN DIVIDE(CY-PY, PY, 0)
+```
 
 ## 💡 Business Insights
 
@@ -260,7 +380,7 @@ python python/export_reports.py
 
 - Python 3.8+
 - PostgreSQL 15+ (optional, for database features)
-- Power BI Desktop (to view .pbix dashboard)
+- Power BI Desktop (to open `.pbit` template)
 - Git
 
 ### Installation
@@ -289,28 +409,37 @@ python python/validate_data.py
 python python/analysis.py
 python python/export_reports.py
 
-# 6. (Optional) Set up PostgreSQL
+# 6. Launch the interactive Dash dashboard (http://localhost:8050)
+python python/dashboard.py
+
+# 7. (Optional) Launch the Flask web app (http://localhost:5000)
+python python/web_app.py
+
+# 8. (Optional) Set up PostgreSQL
 # Execute sql/schema.sql in your database
 # Then execute sql/insert.sql to load data
 
-# 7. Open Power BI Dashboard
-# Open powerbi/Ecommerce Dashboard.pbix with Power BI Desktop
+# 9. Open Power BI Dashboard
+# Open powerbi/Ecommerce_Dashboard.pbit with Power BI Desktop
+# Point to: data/raw/ecommerce_orders.csv
 ```
 
 ## 📈 Resume Description
 
-> **E-Commerce Sales Analytics & BI Dashboard** — Developed a comprehensive Business Intelligence solution analyzing 15,000+ e-commerce transactions. Engineered a normalized PostgreSQL database with 11 tables, implemented 50+ analytical SQL queries using advanced techniques (CTEs, Window Functions, Views, Stored Procedures). Built a production-grade Python ETL pipeline for data cleaning, validation, and feature engineering. Created a professional Power BI dashboard with 8 interactive pages featuring KPI cards, trend analysis, geographic mapping, and sales forecasting. Generated automated Excel/CSV reporting with pivot tables. Delivered comprehensive business documentation including BRD, FS, Technical Documentation, and Data Dictionary.
+> **E-Commerce Sales Analytics & BI Dashboard** — Developed a comprehensive Business Intelligence solution analyzing 15,000+ e-commerce transactions across 2,000 customers. Engineered a normalized PostgreSQL database with 11 tables, implemented 50+ analytical SQL queries using advanced techniques (CTEs, Window Functions, Views, Stored Procedures). Built a production-grade Python ETL pipeline with shared utilities for data cleaning, validation, and feature engineering. Developed an **interactive Plotly/Dash dashboard** with 6 tabs, 20+ real-time visualizations, and 5 dynamic filters. Created a **Flask web application** with a dark-themed UI and 9 REST API endpoints for programmatic data access. Built a professional Power BI template with 8 pages, 49+ visuals, and comprehensive DAX measures. Generated automated Excel/CSV/HTML reporting. Delivered complete business documentation including BRD, FS, Technical Documentation, and Data Dictionary.
 
 ## 🔮 Future Enhancements
 
-- [ ] **Real-time Dashboard** - Live data refresh with streaming
-- [ ] **Machine Learning Models** - Customer churn prediction, product recommendation
-- [ ] **Web Application** - Flask/Django web interface for interactive analysis
-- [ ] **Automated Email Reports** - Scheduled report distribution
-- [ ] **API Integration** - REST API for data access
-- [ ] **A/B Testing Module** - Statistical significance testing
-- [ ] **Inventory Analytics** - Stock level and supply chain analysis
-- [ ] **Sentiment Analysis** - Customer review and feedback analysis
+- [x] **Web Application** — Flask web interface with REST API *(implemented)*
+- [x] **Interactive Dashboard** — Plotly/Dash dashboard with filters and tabs *(implemented)*
+- [x] **Static HTML Reports** — Embedded Plotly charts in standalone report *(implemented)*
+- [ ] **Real-time Dashboard** — Live data refresh with streaming
+- [ ] **Machine Learning Models** — Customer churn prediction, product recommendation
+- [ ] **Automated Email Reports** — Scheduled report distribution
+- [ ] **API Integration** — External API data sources
+- [ ] **A/B Testing Module** — Statistical significance testing
+- [ ] **Inventory Analytics** — Stock level and supply chain analysis
+- [ ] **Sentiment Analysis** — Customer review and feedback analysis
 
 ## 📄 License
 
